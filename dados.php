@@ -71,6 +71,3 @@ foreach ($data as $repo) {
         'languages'   => $langs,
     ];
 }
-// print_r($data);
-// print_r($projetos);
-// die();

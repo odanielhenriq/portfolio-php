@@ -117,19 +117,18 @@
       <div class="mx-auto max-w-screen-2xl px-4 mt-10 grid grid-cols-1 md:grid-cols-2 gap-5">
   <?php foreach ($projetos as $projeto): ?>
     <article class="h-full">
-      <!-- card: linha com imagem à esquerda e conteúdo à direita -->
+
       <div class="flex h-full bg-gray-400 rounded-xl overflow-hidden mx-5 items-stretch">
-        <!-- container da imagem: largura fixa, não encolhe -->
         <div class="flex-shrink-0 w-40 md:w-48 lg:w-56">
-          <!-- sem padding no img (padding desloca espaço). use object-cover -->
-          <img
-            src="assets/img/image.png"
-            alt="<?php echo htmlspecialchars($projeto['name'] ?? 'Projeto') ?>"
-            class="w-full h-full object-cover block"
-          />
+           <a target="_blank" href="<?php echo htmlspecialchars($projeto['html_url'] ?? '#') ?>">
+            <img
+              src="assets/img/image.png"
+              alt="<?php echo htmlspecialchars($projeto['name'] ?? 'Projeto') ?>"
+              class="w-full h-full object-cover block"
+            />
+          </a>
         </div>
 
-        <!-- conteúdo: ocupa o resto e distribui verticalmente -->
         <div class="p-4 flex-1 flex flex-col justify-between">
           <div>
             <h3 class="text-xl font-bold text-gray-100">
@@ -140,7 +139,6 @@
             </p>
           </div>
 
-          <!-- badges sempre na base do card -->
           <div class="mt-4">
             <div class="flex flex-wrap gap-2">
               <?php foreach ($projeto['languages'] as $lang): ?>
@@ -207,7 +205,8 @@
 
     <footer class="mx-auto max-w-screen-lg text-center mt-50">
       <div class="border-t border-gray-600 pt-6 px-3 text-gray-200">
-        © Copyright                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         <?php echo date('Y'); ?>. Construído por mim mesmo :) .
+        © Copyright
+        <?php echo date('Y'); ?>. Construído por mim mesmo :) .
       </div>
     </footer>
 
