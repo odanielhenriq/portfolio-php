@@ -207,21 +207,9 @@
 
     <footer class="mx-auto max-w-screen-lg text-center mt-50">
       <div class="border-t border-gray-600 pt-6 px-3 text-gray-200">
-        © Copyright                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <?php echo date('Y'); ?>. Construído por mim mesmo :) .
+        © Copyright                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         <?php echo date('Y'); ?>. Construído por mim mesmo :) .
       </div>
     </footer>
 
   </body>
-
-   <script>
-        const username = "odanielhenriq"; // troque pelo seu nome de usuário
-
-        const data = fetch(`https://api.github.com/users/${username}/repos`)
-            .then((res) => res.json())
-            .then((data) => {
-                console.log(data);
-            })
-            .catch((err) => console.error(err));
-    </script>
-
 </html>
